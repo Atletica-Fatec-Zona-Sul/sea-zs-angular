@@ -1,0 +1,10 @@
+.t_logo{
+	font-size: 33px;
+	text-align: center;
+}
+
+.c_logo{
+	height: 225px; 
+	width: 100%; 
+	display: block;
+}

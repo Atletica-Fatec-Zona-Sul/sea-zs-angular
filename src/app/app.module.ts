@@ -2,12 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { OlaMundoComponent } from './ola-mundo/ola-mundo.component';
+import { PainelEventosComponent } from './painel-eventos/painel-eventos.component';
+import { MenuLateralComponent } from './barra-navegacao/menu-lateral/menu-lateral.component';
+import { BarraNavegacaoComponent } from './barra-navegacao/barra-navegacao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OlaMundoComponent
+    PainelEventosComponent,
+    MenuLateralComponent,
+    BarraNavegacaoComponent
   ],
   imports: [
     BrowserModule
