@@ -7,6 +7,7 @@ import { BarraNavegacaoComponent } from './barra-navegacao/barra-navegacao.compo
 import { ConsultaEventoComponent } from './eventos/consulta-evento/consulta-evento.component';
 import { LoginComponent } from './usuario/login/login.component';
 import { UsuarioInicioComponent } from './usuario/usuario-inicio/usuario-inicio.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 let routes = [
   { path : "usuario-inicio", component: UsuarioInicioComponent},
@@ -23,7 +24,8 @@ let routes = [
     BarraNavegacaoComponent,
     ConsultaEventoComponent,
     LoginComponent,
-    UsuarioInicioComponent
+    UsuarioInicioComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
