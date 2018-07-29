@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'app-painel-eventos',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PainelEventosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   eventos = [{
         "id": 1,
@@ -39,6 +40,11 @@ export class PainelEventosComponent implements OnInit {
   }]
 
   ngOnInit() {
+    
+  }
+
+  abrirEvento(id: number) {
+    this.router.navigate(['consulta-evento', id]);
   }
 
 }

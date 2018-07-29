@@ -11,7 +11,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 
 let routes = [
   { path : "usuario-inicio", component: UsuarioInicioComponent},
-  { path : "login", component: LoginComponent}
+  { path : "login", component: LoginComponent},
+  { path : "consulta-evento/:id", component: ConsultaEventoComponent}
   
 
 ]
