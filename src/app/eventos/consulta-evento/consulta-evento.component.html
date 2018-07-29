@@ -1,1 +1,25 @@
-{{id}}
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        {{agendamento.usuarioOrganizador}}
+                    </th>
+                </tr>
+                <tr>
+                    {{agendamento.inicio}} - {{agendamento.fim}}
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let atividade of agendamento.atividades">
+                    <td>
+                        {{atividade.nome}}
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
