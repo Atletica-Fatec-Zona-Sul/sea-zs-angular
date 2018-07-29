@@ -1,18 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { PainelEventosComponent } from './painel-eventos/painel-eventos.component';
+import { PainelEventosComponent } from './eventos/painel-eventos/painel-eventos.component';
 import { BarraNavegacaoComponent } from './barra-navegacao/barra-navegacao.component';
+import { ConsultaEventoComponent } from './eventos/consulta-evento/consulta-evento.component';
+import { LoginComponent } from './usuario/login/login.component';
+import { UsuarioInicioComponent } from './usuario/usuario-inicio/usuario-inicio.component';
+
+let routes = [
+  { path : "usuario-inicio", component: UsuarioInicioComponent},
+  { path : "login", component: LoginComponent}
+
+]
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PainelEventosComponent,
-    BarraNavegacaoComponent
+    BarraNavegacaoComponent,
+    ConsultaEventoComponent,
+    LoginComponent,
+    UsuarioInicioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
