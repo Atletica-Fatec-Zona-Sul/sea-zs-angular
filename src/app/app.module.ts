@@ -11,6 +11,7 @@ import { UsuarioInicioComponent } from './usuario/usuario-inicio/usuario-inicio.
 let routes = [
   { path : "usuario-inicio", component: UsuarioInicioComponent},
   { path : "login", component: LoginComponent}
+  
 
 ]
 
