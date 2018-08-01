@@ -7,17 +7,15 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
-    margin-top: 45%;
-    
-   
+	margin-top: 45%;
+	float: left;  
 }
 
-/* -- inserir imagem do logo -- */
+/* -- estiLo do logo -- */
 .img-logo {
-	height: 40px;
-	width: 132px;
+	height: 80%px;
+	width: 90%;
 	display: block;
-	background: url('/') no-repeat;
 	background-size: contain;
 	color: transparent;
 }
@@ -34,14 +32,17 @@ footer {
     text-decoration:none;
 }
 
-/* -- Icons para a direita -- */
+/* -- Ícones de rede social  -- */
 .item-rede-social{
     float: right;  
 }
 
-/* -- Configuração do h4 -- */
+/* -- Padronização das fontes do rodapé -- */
 #rodape h4 {
 	color: #919496;
 	font-size: 12px;
 	text-transform: uppercase;
 }
+
+/* --========================================= FIM =======================================-- */
+
