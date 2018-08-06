@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router"
+import { EventoService } from '../evento.service';
+import { IEvento } from '../../model/IEvento';
+
+/**================= CLASSE RESPONSÁVEL PELO COMPONENT DO PAINEL DE EVENTOS DA PÁGINA INICAL ===================*/
 
 @Component({
   selector: 'app-painel-eventos',
@@ -8,43 +12,24 @@ import { Router } from "@angular/router"
 })
 export class PainelEventosComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private eventoService : EventoService) { }
 
-  eventos = [{
-        "id": 1,
-        "nome": "Semana de Técnologia",
-        "descricao": "Serão feitas diversas atividades com os alunos da Fatec Zona Sul, entre elas palestras, workshops e treinamentos.",
-        "dataInicio": "06/09/2018",
-        "dataFim": "11/09/2018"
-      },
-      {
-        "id": 2,
-        "nome": "Atlética Fatec Zona Sul",
-        "descricao": "Atividades esportivas e campeonatos para os alunos da Fatec Zona Sul participarem durante o semestre",
-        "dataInicio": "01/08/2018",
-        "dataFim": "10/12/2018"
-      },
-      {
-        "id": 3,
-        "nome": "Atlética Fatec Zona Sul",
-        "descricao": "Atividades esportivas e campeonatos para os alunos da Fatec Zona Sul participarem durante o semestre",
-        "dataInicio": "01/08/2018",
-        "dataFim": "10/12/2018"
-      },
-      {
-        "id": 4,
-        "nome": "Atlética Fatec Zona Sul",
-        "descricao": "Atividades esportivas e campeonatos para os alunos da Fatec Zona Sul participarem durante o semestre",
-        "dataInicio": "01/08/2018",
-        "dataFim": "10/12/2018"
-      }]
+  // Array que simula (faz um mock) dados que serão recebidos pelo backend via rest
+  eventos : IEvento[];
 
   ngOnInit() {
-    
+    this.eventoService.getEventos().subscribe
+    (data => {
+      this.eventos = data;  
+      console.log(data[0].id);
+    });
+   
   }
 
+
+
+  // Chamada de navegação
   abrirEvento(id: number) {
     this.router.navigate(['consulta-evento', id]);
   }
-
 }

@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-md-3" *ngFor="let agendamento of evento.agendamentos">
-        <table class="table table-hover" >
+    <div class="col-md-3" *ngFor="let agendamento of evento">
+        <table class="table table-hover">
             <thead>
                 <tr>
-                   <th >
-                        {{agendamento.usuarioOrganizador}}
+                    <th>
+                        {{agendamento.usuarioOrganizador.nome}}
                     </th>
                 </tr>
                 <tr>
@@ -13,10 +13,15 @@
                 </tr>
             </thead>
             <tbody>
+
                 <tr *ngFor="let atividade of agendamento.atividades">
                     <td>
-                        <p><b>{{atividade.nome}}</b></p>
-                        <p>{{atividade.inicioAtividade}} - {{atividade.inicioAtividade}}</p>
+                   <a [routerLink]="['/consulta-atividade', atividade]" > 
+                            <p>
+                                <b>{{atividade.nome}}</b>
+                            </p>
+                            <p>{{atividade.inicioAtividade}} - {{atividade.fimAtividade}}</p>
+                        </a> 
                     </td>
                 </tr>
 
