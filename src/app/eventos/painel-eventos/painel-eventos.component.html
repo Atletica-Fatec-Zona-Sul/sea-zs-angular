@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <div class="row espaco">
     <div class="col-md-4" *ngFor="let evento of eventos">
@@ -11,6 +12,31 @@
           <a [routerLink]="['/consulta-evento', evento.id]" class="btn btn-primary">Saiba mais</a>
           <div class="d-flex justify-content-between align-items-center">
           </div>
+=======
+<!-- CÓDIGO DA DO PAINEL SENDO POPULADO PELA CLASSE* DO PAINE-EVENTOS POR SUAS VÁRIAVEL (*VER ESCOPO(PASTA) DO APP)  
+  Divisão de linha 
+-->
+<div class="row espaco" *ngIf="eventos">
+  <!-- Divisão colunar com separação em 4 na linha sendo interada em um loop por toda a página
+       Popula os dados usando a variavel evento -->
+  <div class="col-md-4"  *ngFor="let evento of eventos">
+    <!-- criando um card com borda sombreada em formato de caixa -->
+    <div class="card mb-4 box-shadow">
+      <!-- chamada da imagem do logo do Evento() -->
+      <img class="card-img-top" src="/src/app/eventos/painel-eventos/events.svg" data-holder-rendered="true">
+      <!-- corpo do Evento -->
+      <div class="card-body">
+        <!-- titulo do Evento-->
+        <h5 class="card-title">{{evento.nome}}</h5>
+        <!-- Descrição do evento -->
+        <p class="card-text">{{evento.descricao}}</p>
+        <!-- Duração e Data de Início e fim -->
+        <p class="card-text">
+          <b>Duração: (De {{evento.inicio}} até {{evento.fim}})</b></p>
+        <a [routerLink]="['/consulta-evento', evento.id]" class="btn btn-primary">Saiba mais</a>
+        <!-- Aquelas gambiarra necessária pra css funcionar.. (retirar) -->
+        <div class="d-flex justify-content-between align-items-center">
+>>>>>>> 255d0595ffc995e7d0b44e790b484225bff98de1
         </div>
       </div>
     </div>
