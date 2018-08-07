@@ -8,6 +8,9 @@ import { ConsultaEventoComponent } from './eventos/consulta-evento/consulta-even
 import { LoginComponent } from './usuario/login/login.component';
 import { UsuarioInicioComponent } from './usuario/usuario-inicio/usuario-inicio.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { FormCursoComponent } from './form-curso/form-curso.component';
+
+
 
 let routes = [
   { path : "usuario-inicio", component: UsuarioInicioComponent},
@@ -26,7 +29,8 @@ let routes = [
     ConsultaEventoComponent,
     LoginComponent,
     UsuarioInicioComponent,
-    RodapeComponent
+    RodapeComponent,
+    FormCursoComponent,
   ],
   imports: [
     BrowserModule,

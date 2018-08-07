@@ -21,12 +21,12 @@ footer {
 }
 
 /* -- Configuração dos links do footer -- */
-.navbar-inverse .navbar-nav>li>a, footer .nav a {
+.navbar-inverse .navbar-nav>li>a, footer .navbar  a {
 	color: white;
 }
 
 /* -- Configuração do evento do footer -- */
-.navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover {
+.navbar-inverse .navbar-nav>li>a:hover, footer .navbar  a:hover {
 	color: #9bf0e1;
     background: none;
     text-decoration:none;
@@ -43,6 +43,9 @@ footer {
 	font-size: 12px;
 	text-transform: uppercase;
 }
+
+
+
 
 /* --========================================= FIM =======================================-- */
 
