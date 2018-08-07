@@ -1,19 +1,33 @@
 
+ /* centralização do bloco do login */
 #login .container #login-row #login-column #login-box {
-    margin-top: 120px;
-    max-width: 600px;
-    height: 510px;
-    border: 1px solid lightgrey;    
-    padding-bottom: 50%;
-    color: black;
+  margin-top: 120px;
+  max-width: 600px;
+  height: 510px;
+  border: 1px solid lightgrey;    
+  padding-bottom: 50%;
+  color: black;
     
-  }
-  #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
-  }
+}
+
+ /* configuração padding interno do container */
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+
+  /* configuração do logo */
+.logo-login{
+  width: 80%;
+  height: 5%;
+  padding-bottom: 50px;
+}
+
+  /* sombra do login */
+.login-sombra{ 
+  z-index: -1; 
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+  
+}
  
-  .logo-login{
-    width: 80%;
-    height: 5%;
-    padding-bottom: 50px;
-  }
