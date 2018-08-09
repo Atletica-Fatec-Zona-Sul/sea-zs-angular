@@ -12,7 +12,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { FormCursoComponent } from './form-curso/form-curso.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ConsultaAtividadeComponent } from './atividade/consulta-atividade/consulta-atividade.component'; 
+import { ConsultaAtividadeComponent } from './atividade/consulta-atividade/consulta-atividade.component';
+import { FormUsuarioComponent } from './usuario/form-usuario/form-usuario.component'; 
 
 let routes = [
   { path: "consulta-atividade", component: ConsultaAtividadeComponent },
@@ -31,7 +32,8 @@ let routes = [
     UsuarioInicioComponent,
     RodapeComponent,
     FormCursoComponent,
-    ConsultaAtividadeComponent
+    ConsultaAtividadeComponent,
+    FormUsuarioComponent
   ],
   imports: [
     BrowserModule,
