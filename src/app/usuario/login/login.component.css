@@ -1,13 +1,14 @@
 
+/* ======================================= LOGIN =================================*/
+ 
  /* centralização do bloco do login */
-#login .container #login-row #login-column #login-box {
+ #login .container #login-row #login-column #login-box {
   margin-top: 120px;
   max-width: 600px;
   height: 510px;
   border: 1px solid lightgrey;    
   padding-bottom: 50%;
-  color: black;
-    
+  color: black;  
 }
 
  /* configuração padding interno do container */
@@ -28,6 +29,17 @@
   -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
-  
 }
- 
+
+ /* cor do link botão cadastro */
+div a{
+  color: white;
+}
+
+ /* modificação para mobile */
+@media screen and (min-width: 700px){
+    .botao{
+      padding-left: 16%;
+    }
+}
+/* ======================================= FIM LOGIN =================================*/

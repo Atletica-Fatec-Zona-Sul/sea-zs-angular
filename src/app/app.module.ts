@@ -19,7 +19,8 @@ let routes = [
   { path: "consulta-atividade", component: ConsultaAtividadeComponent },
   { path : "usuario-inicio", component: UsuarioInicioComponent},
   { path : "login", component: LoginComponent},
-  { path : "consulta-evento/:id", component: ConsultaEventoComponent}
+  { path : "consulta-evento/:id", component: ConsultaEventoComponent},
+  { path : "form-usuario", component: FormUsuarioComponent}
 ]
 
 @NgModule({
