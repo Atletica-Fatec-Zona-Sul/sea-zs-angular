@@ -25,6 +25,7 @@
 
   /* sombra do login */
 .login-sombra{ 
+  z-index: -1; 
   -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
@@ -35,13 +36,7 @@ div a{
   color: white;
 }
 
- /* formatação do check-box 'lembrar-me' */
-.format-span{
-  padding: 5px;
-  padding-top: 10px;
-}
-
-/* modificação para mobile */
+ /* modificação para mobile */
 @media screen and (min-width: 700px){
     .botao{
       padding-left: 16%;
