@@ -8,16 +8,6 @@ footer {
     width: 100%;
     bottom: 0;
 	margin-top: 15%;
-	
-}
-
-/* -- estiLo do logo -- */
-.img-logo {
-	height: 80%px;
-	width: 90%;
-	display: block;
-	background-size: contain;
-	color: transparent;
 }
 
 /* -- Configuração dos links do footer -- */
@@ -44,8 +34,27 @@ footer {
 	text-transform: uppercase;
 }
 
+/* modificação para pc*/
+@media screen and (min-width: 700px){
+	/* -- estiLo para img que aparece apenas acima de 700px -- */
+	.img-logo-pc{
+		background-image: url("/src/assets/img/logofatec1.png");
+		background-repeat: no-repeat;
+	} 
+	/* -- estilo do bloco do span do logo -- */
+	span{
+		height: 50%;
+	}
 
-
+	/* -- estiLo da img do logo -- */
+	.img-logo {
+		height: 80%px;
+		width: 90%;
+		display: block;
+		background-size: contain;
+		color: transparent;
+	}
+}
 
 /* --========================================= FIM =======================================-- */
 

@@ -1,1 +1,19 @@
 
+/*
+a.navbar-brand{
+    background-image: url("/src/assets/img/logofatec1.png");
+    background-repeat: no-repeat;
+} 
+
+
+/* -- estiLo da img do logo -- 
+.img-logo{
+    height: 80%px;
+    width: 10%;
+    display: block;
+    background-size: contain;
+    color: transparent;   
+}
+a.navbar-brand.img-logo:hover{
+    color:  transparent; ;
+}*/

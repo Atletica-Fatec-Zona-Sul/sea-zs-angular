@@ -30,21 +30,54 @@
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
 }
 
- /* cor do link botão cadastro */
-div a{
-  color: white;
-}
 
  /* formatação do check-box 'lembrar-me' */
 .format-span{
-  padding: 5px;
-  padding-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 
-/* modificação para mobile */
-@media screen and (min-width: 700px){
+/* modificação para pc*/
+@media screen and (min-width: 770px){
     .botao{
-      padding-left: 16%;
+      padding-left: 17%;
     }
+}
+
+/* REVER E MODIFICAR IPAD*/
+@media screen and (min-width: 780px){
+  .botao{
+    padding-left: 6%;
+  }
+}
+
+/* modificação para ipad*/
+@media screen and (min-width: 567px){
+  .botao{
+    padding-left: 16%;
+  }
+}
+
+
+
+/* modificação para mobile*/
+@media screen and (max-width: 414px){
+  .botao{
+    padding-left: 8%;
+  }
+}
+
+/* modificação para mobile*/
+@media screen and (max-width: 365px){
+  .botao{
+    padding-left: 4%;
+  }
+}
+
+/* modificação para mobile*/
+@media screen and (max-width: 330px){
+  .botao{
+    padding-left: 1%;
+  }
 }
 /* ======================================= FIM LOGIN =================================*/
