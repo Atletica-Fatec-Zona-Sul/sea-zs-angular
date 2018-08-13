@@ -13,14 +13,16 @@ import { FormCursoComponent } from './form-curso/form-curso.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ConsultaAtividadeComponent } from './atividade/consulta-atividade/consulta-atividade.component';
-import { FormUsuarioComponent } from './usuario/form-usuario/form-usuario.component'; 
+import { FormUsuarioComponent } from './usuario/form-usuario/form-usuario.component';
+import { MinhaAreaComponent } from './usuario/minha-area/minha-area.component'; 
 
 let routes = [
   { path: "consulta-atividade", component: ConsultaAtividadeComponent },
   { path : "usuario-inicio", component: UsuarioInicioComponent},
   { path : "login", component: LoginComponent},
   { path : "consulta-evento/:id", component: ConsultaEventoComponent},
-  { path : "form-usuario", component: FormUsuarioComponent}
+  { path : "form-usuario", component: FormUsuarioComponent},
+  { path : "minha-area", component: MinhaAreaComponent}
 ]
 
 @NgModule({
@@ -34,7 +36,8 @@ let routes = [
     RodapeComponent,
     FormCursoComponent,
     ConsultaAtividadeComponent,
-    FormUsuarioComponent
+    FormUsuarioComponent,
+    MinhaAreaComponent
   ],
   imports: [
     BrowserModule,
