@@ -7,18 +7,24 @@
     height: 100%;
 }
 
-/*margem do título Minha Área*/
 h1{
-    margin-top: 20%;    
+    margin-top: 10%;    
 }
 
-/* Mobile img do carrossel */
-@media only screen and (min-width:400px){
+/* Mobile configurações do carrossel */
+@media only screen and (max-width:400px){
     .container-carrossel{
         width: 100%;
     }
-    p{
-        float: left;
+
+    .container{
+        width: none;
+    }
+
+
+    /*margem do título Minha Área*/
+    h1{
+        margin-top: 20%;    
     }
 }
 /* ================== ******* ================*/
