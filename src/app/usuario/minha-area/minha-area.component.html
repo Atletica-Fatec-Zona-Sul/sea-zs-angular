@@ -8,8 +8,8 @@
     <!--=================== MEU CADASTRO ===================-->
     <div id="accordion">
       <div class="card ">
-        <div class="card-header  bg-dark ">
-          <a class="card-link text-white" data-toggle="collapse" href="#collapseOne">Meu Cadastro</a>
+        <div class="card-header">
+          <a class="card-link text-dark" data-toggle="collapse" href="#collapseOne">Meu Cadastro</a>
         </div>
         <div id="collapseOne" class="collapse show" data-parent="#accordion">
           <div class="card-body">
@@ -23,13 +23,41 @@
 
        <!-- ============== PONTUAÇÃO PARTICIPANTE ==================-->
       <div class="card">
-        <div class="card-header bg-secondary">
-          <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseTwo">Pontuação</a>
+        <div class="card-header ">
+          <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseTwo">Pontuação</a>
         </div>
         <div id="collapseTwo" class="collapse" data-parent="#accordion">
-          <div class="card-body ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <div class="card-body table-responsive">
+            <table class="table table-hover ">
+              <thead>
+                <tr>
+                  <th scope="col">COD</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Pontuação</th>
+                  <th scope="col">Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-success">
+                  <th scope="row">1</th>
+                  <td>Semestral</td>
+                  <td>50</td>
+                  <td>AA/MM/YYYY</td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">2</th>
+                  <td>Anual</td>
+                  <td>100</td>
+                  <td>AA/MM/YYYY</td>
+                </tr>
+                <tr class="table-warning">
+                  <th scope="row">3</th>
+                  <td>Total</td>
+                  <td>200</td>
+                  <td>AA/MM/YYYY</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -39,7 +67,7 @@
             Minhas Atividade
           </a>
         </div>
-        <div id="collapseThree" class="collapse img-circle" data-parent="#accordion">
+        <div id="collapseThree" class="collapse " data-parent="#accordion">
           <div class="card-body">
 
             <!-- CARROSSEL-->
