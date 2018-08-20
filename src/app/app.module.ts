@@ -8,9 +8,9 @@ import { ConsultaEventoComponent } from './eventos/consulta-evento/consulta-even
 import { LoginComponent } from './usuario/login/login.component';
 import { UsuarioInicioComponent } from './usuario/usuario-inicio/usuario-inicio.component';
 import { RodapeComponent } from './rodape/rodape.component';
-
+import { NgForm } from '@angular/forms';
 import { FormCursoComponent } from './form-curso/form-curso.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConsultaAtividadeComponent } from './atividade/consulta-atividade/consulta-atividade.component';
 import { FormUsuarioComponent } from './usuario/form-usuario/form-usuario.component';
@@ -45,7 +45,9 @@ let routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

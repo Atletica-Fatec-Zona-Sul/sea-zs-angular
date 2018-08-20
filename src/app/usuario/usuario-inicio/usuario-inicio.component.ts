@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from '../../model/IUsuario';
 
 @Component({
   selector: 'app-usuario-inicio',
@@ -9,7 +10,9 @@ export class UsuarioInicioComponent implements OnInit {
 
   constructor() { }
 
+ 
   ngOnInit() {
+    console.log(localStorage.getItem("usuario.nome"));
   }
 
 }
