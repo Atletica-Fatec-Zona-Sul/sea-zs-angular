@@ -13,18 +13,20 @@ import { IAgendamento } from '../../model/IAgendamento';
 export class ConsultaEventoComponent implements OnInit {
 
   id: number;
-  evento : IAgendamento[];
+  nome : string;
+  agendamentos : IAgendamento[];
 
   constructor(private route : ActivatedRoute, private eventoService : EventoService) { }
 
   ngOnInit() {
     this.route.params.subscribe((objeto : any) => {
       this.id = objeto['id'];
+      this.nome = objeto['nome'];
     });
     this.eventoService.getEvento(this.id).subscribe
     (data => {
       console.log(data);
-      this.evento = data;  
+      this.agendamentos = data;  
     });
   }
 }

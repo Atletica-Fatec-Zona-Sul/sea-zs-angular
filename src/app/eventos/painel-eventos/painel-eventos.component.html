@@ -1,4 +1,6 @@
 <div class="container">
+  <h2>Bem vindo {{usuario.nome}},</h2>
+  <h4>Abaixo estão listados os Eventos da Fatec Zona Sul:</h4>
   <div class="row espaco">
     <div class="col-md-4" *ngFor="let evento of eventos">
       <div class="card mb-4 box-shadow">
@@ -7,8 +9,8 @@
           <h5 class="card-title">{{evento.nome}}</h5>
           <p class="card-text">{{evento.descricao}}</p>
           <p class="card-text">
-            <b>Data Inicio: </b>{{evento.dataInicio}} - {{evento.dataFim}}</p>
-          <a [routerLink]="['/consulta-evento', evento.id]" class="btn btn-primary">Saiba mais</a>
+            <b>Data Inicio: </b>{{evento.inicio | date: 'dd/MM/yyyy'}} - {{evento.fim | date: 'dd/MM/yyyy'}}</p>
+          <a [routerLink]="['/consulta-evento', evento.id, evento.nome]" class="btn btn-primary">Saiba mais</a>
           <div class="d-flex justify-content-between align-items-center">
           </div>
         </div>

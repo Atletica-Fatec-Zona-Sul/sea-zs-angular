@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from '../../model/IUsuario';
 
 @Component({
   selector: 'app-minha-area',
@@ -9,7 +10,9 @@ export class MinhaAreaComponent implements OnInit {
 
   constructor() { }
 
+  usuario : IUsuario;
   ngOnInit() {
+    this.usuario = new IUsuario();
   }
 
 }

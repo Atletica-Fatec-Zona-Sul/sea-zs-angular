@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from '../../model/IUsuario';
 
 @Component({
   selector: 'app-form-usuario-log',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class FormUsuarioLogComponent implements OnInit {
 
   constructor() { }
+  usuario : IUsuario;
 
   ngOnInit() {
+    this.usuario = new IUsuario();
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from '../model/IUsuario';
 
 @Component({
   selector: 'app-barra-navegacao',
@@ -9,7 +10,10 @@ export class BarraNavegacaoComponent implements OnInit {
 
   constructor() { }
 
+  usuario : IUsuario;
+
   ngOnInit() {
+    this.usuario = new IUsuario();
   }
 
 }

@@ -3,8 +3,11 @@
   <h1>Minha Área</h1>
   <hr>
   <div class="container">
-    <h3>Bem vindo Aluno</h3>
-
+    <h3>Bem vindo {{usuario.nome}}</h3>
+    <p>Abaixo está o seu QR Code para validação de presença nas atividades:</p>
+    <div class="col-md-6 mb-3">
+        <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl={{usuario.id}}">
+        </div>
     <!--=================== MEU CADASTRO ===================-->
     <div id="accordion">
       <div class="card ">

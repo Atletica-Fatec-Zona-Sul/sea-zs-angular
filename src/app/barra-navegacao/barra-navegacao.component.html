@@ -1,6 +1,6 @@
 
 <!--Menu de navegação principal-->
-<nav class="navbar navbar-expand-md fixed-top bg-danger navbar-dark ">
+<nav *ngIf="usuario.id" class="navbar navbar-expand-md fixed-top bg-danger navbar-dark ">
   <a class="navbar-brand" a routerLink="/usuario-inicio">SEA - ZS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -10,9 +10,7 @@
       <li class="nav-item">
         <a class="nav-link" a routerLink="/usuario-inicio">Eventos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" a routerLink="/login">Login</a>
-      </li>
+     
       <li class="nav-item">
         <a class="nav-link" a routerLink="/minha-area">Minha Área</a>
       </li>

@@ -12,7 +12,7 @@ export class UsuarioInicioComponent implements OnInit {
 
  
   ngOnInit() {
-    console.log(localStorage.getItem("usuario.nome"));
+    console.log(sessionStorage.getItem("usuario.nome"));
   }
 
 }

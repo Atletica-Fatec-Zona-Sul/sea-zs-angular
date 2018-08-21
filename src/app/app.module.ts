@@ -20,8 +20,8 @@ import { FormUsuarioLogComponent } from './usuario/form-usuario-log/form-usuario
 let routes = [
   { path: "consulta-atividade", component: ConsultaAtividadeComponent },
   { path : "usuario-inicio", component: UsuarioInicioComponent},
-  { path : "login", component: LoginComponent},
-  { path : "consulta-evento/:id", component: ConsultaEventoComponent},
+  { path : "", component: LoginComponent},
+  { path : "consulta-evento/:id/:nome", component: ConsultaEventoComponent},
   { path : "form-usuario", component: FormUsuarioComponent},
   { path : "minha-area", component: MinhaAreaComponent},
   { path : "form-usuario-log", component: FormUsuarioLogComponent}

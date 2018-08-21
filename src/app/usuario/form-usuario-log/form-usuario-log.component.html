@@ -6,7 +6,7 @@
       <div class="row">
           <div class="col-md-6 mb-3">
               <label for="firstName">Nome</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="firstName" placeholder="" value="{{usuario.nome}}" required="">
               <div class="invalid-feedback">
                   O nome é Obrigatório.
               </div>
@@ -14,7 +14,7 @@
           <!--RG-->
           <div class="col-md-6 mb-3">
               <label for="lastName">RG</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <input type="text" class="form-control" id="lastName" placeholder="" value="{{usuario.rg}}" required="">
               <div class="invalid-feedback">
                   O RG é Obrigatório.
               </div>
@@ -24,7 +24,7 @@
       <div class="row">
           <div class="col-md-6 mb-3">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="seu_email@email.com">
+              <input type="email" class="form-control" value="{{usuario.email}}" id="email" placeholder="seu_email@email.com">
               <div class="invalid-feedback">
                   O E-mail é Obrigatório.
               </div>
@@ -32,7 +32,7 @@
           <!--Celular-->
           <div class="col-md-6 mb-3">
               <label for="address">Celular</label>
-              <input type="text" class="form-control" id="address" placeholder="" required="">
+              <input type="text" class="form-control" value="{{usuario.celular}}" id="address" placeholder="" required="">
               <div class="invalid-feedback">
                   O telefone celular é Obrigatório.
               </div>
@@ -42,9 +42,9 @@
       <div class="row">
           <div class="col-md-6 mb-3">
               <label for="state">Gênero</label>
-              <select class="custom-select d-block w-100" id="state" required="">
+              <select class="custom-select d-block w-100" value="{{usuario.genero}}" id="state" required="">
                   <option value="">Escolha</option>
-                  <option>Masculino</option>
+                  <option selected>Masculino</option>
                   <option>Feminino</option>
               </select>
           </div>
@@ -60,7 +60,7 @@
       <!--Seleção de tipo de Usuario-->
       <hr>
       <h4 class="mb-3">Tipo de Usuario</h4>
-
+   
       <!--Tipo Visitante-->
       <div class="custom-control custom-radio">
           <input id="Visitante" name="paymentMethod" type="radio" class="custom-control-input" required="">
@@ -148,6 +148,7 @@
                       A Matricula é Obrigatório.
                   </div>
               </div>
+       
           </div>
       </div>
       <div class="row">
@@ -158,7 +159,8 @@
           <div class="col-sm-3 mt-3">
               <button class="btn btn-danger btn-dm btn-block  float-right" type="submit">Excluir</button>
           </div>
-          
+         
       </div>
+    
   </form>
 </div>

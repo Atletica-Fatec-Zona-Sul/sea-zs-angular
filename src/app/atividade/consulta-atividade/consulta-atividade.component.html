@@ -1,3 +1,45 @@
-  
-  {{atividade.nome}}
-  
+<br><br><br>
+
+<div class="container">
+    <!--Cabeçalho-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+      <h4 class="mb-3 mt-3">{{atividade.nome}}</h4>
+    </div>
+    <div class="col-md-4 mb-3">
+        <p class="mb-3 mt-3"><b>Data: </b>{{atividade.inicioAtividade | date: 'dd/MM/yyyy HH:mm'}}<span *ngIf="atividade.flagContinua"> - {{atividade.fimAtividade | date: 'dd/MM/yyyy HH:mm'}}</span></p>
+      </div>
+      <div class="col-md-2 mb-3 ">
+          <p class="mb-3 mt-3"> Pontuação:
+         {{atividade.pontuacaoParticipante}}  </p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mb-3 ">
+            <p class="mb-3 mt-3"> <b>Categoria:</b>
+           {{atividade.categoria}}  </p>
+        </div>
+        <div class="col-md-3 mb-3 ">
+            <p class="mb-3 mt-3"> <b>Local:</b>
+           {{atividade.localAtividade}}  </p>
+        </div>
+        <div class="col-md-3 mb-3 ">
+            <p class="mb-3 mt-3"> <b>Carga Horária:</b>
+           {{atividade.cargaHoraria}} horas </p>
+        </div>
+        <div class="col-md-3 mb-3 ">
+            <p class="mb-3 mt-3"> <b>Quantidade de Vagas:</b>
+           {{atividade.qtdVagas}}  </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 ">
+        <p class="mb-3 mt-3"> <b>Descrição:</b></p></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <p class="mb-12 "> {{atividade.descricao}}</p></div>
+      
+    </div>
+       </div>

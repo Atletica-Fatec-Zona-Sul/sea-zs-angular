@@ -8,5 +8,6 @@ export interface IAtividade {
     qtdVagas: number,
     qtdCheckin: number,
     flagContinua: boolean,
+    localAtividade: string,     
     flagCumulativa: boolean;   
 }

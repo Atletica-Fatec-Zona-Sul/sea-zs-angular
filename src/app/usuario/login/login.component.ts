@@ -22,16 +22,17 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     console.log(this.loginForm.value);
+    
     this.loginService.getUsuario(this.loginForm.value).subscribe(
       data => {
         this.usuario = data;  
         console.log(this.usuario);
         if(this.usuario != null) {
-          localStorage.setItem("usuario.id", this.usuario.id.toString());
-          localStorage.setItem("usuario.email", this.usuario.email.toString());
-          localStorage.setItem("usuario.nome", this.usuario.nome.toString());
-          localStorage.setItem("usuario.adm", this.usuario.adm.toString());
-          localStorage.setItem("usuario.tipoUsuario", this.usuario.tipoUsuario.toString());
+          sessionStorage.setItem("usuario.id", this.usuario.id.toString());
+          sessionStorage.setItem("usuario.email", this.usuario.email.toString());
+          sessionStorage.setItem("usuario.nome", this.usuario.nome.toString());
+          sessionStorage.setItem("usuario.adm", this.usuario.adm.toString());
+          sessionStorage.setItem("usuario.tipoUsuario", this.usuario.tipoUsuario.toString());
           this.router.navigate(['/usuario-inicio']);
         }
       });
@@ -39,6 +40,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.usuario = new IUsuario();
+    if(this.usuario != null) {
+      this.router.navigate(['/usuario-inicio']);
+    }
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],
       senha: ['', Validators.required]

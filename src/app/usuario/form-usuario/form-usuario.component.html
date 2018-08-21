@@ -1,20 +1,22 @@
+<br><br><br>
+
 <div class="container">
     <!--Cabeçalho-->
     <h4 class="mb-3 mt-3">Cadastro de usuario</h4>
-    <form class="needs-validation" novalidate="">
+    <form class="needs-validation" novalidate="" [formGroup]="inserirUsuario" (ngSubmit)="onSubmit()">
         <!--Nome-->
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label for="firstName">Nome</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome" id="nome" placeholder="" value="" required="">
                 <div class="invalid-feedback">
                     O nome é Obrigatório.
                 </div>
             </div>
             <!--RG-->
             <div class="col-md-6 mb-3">
-                <label for="lastName">RG</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <label for="rg">RG</label>
+                <input type="text" class="form-control" name="rg" id="rg" placeholder="" value="" required="">
                 <div class="invalid-feedback">
                     O RG é Obrigatório.
                 </div>
@@ -24,15 +26,15 @@
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="seu_email@email.com">
+                <input type="email" class="form-control" name="email" id="email" placeholder="seu_email@email.com">
                 <div class="invalid-feedback">
                     O E-mail é Obrigatório.
                 </div>
             </div>
             <!--Celular-->
             <div class="col-md-6 mb-3">
-                <label for="address">Celular</label>
-                <input type="text" class="form-control" id="address" placeholder="" required="">
+                <label for="celular">Celular</label>
+                <input type="text" class="form-control" name="celular" id="celular" placeholder="" required="">
                 <div class="invalid-feedback">
                     O telefone celular é Obrigatório.
                 </div>
@@ -41,8 +43,8 @@
         <!--Gênero-->
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label for="state">Gênero</label>
-                <select class="custom-select d-block w-100" id="state" required="">
+                <label for="genero">Gênero</label>
+                <select class="custom-select d-block w-100" name="genero" id="genero" required="">
                     <option value="">Escolha</option>
                     <option>Masculino</option>
                     <option>Feminino</option>
@@ -50,8 +52,8 @@
             </div>
             <!--Nascimento-->
             <div class="col-md-6 mb-3">
-                <label for="bday">Data de Nascimento</label>
-                <input class="form-control" type="date" id="bday" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                <label for="dataNasc">Data de Nascimento</label>
+                <input class="form-control" type="date" id="dataNasc" name="dataNasc" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
                 <span class="validity"></span>
             </div>
             <div>
@@ -63,58 +65,68 @@
 
         <!--Tipo Visitante-->
         <div class="custom-control custom-radio">
-            <input id="Visitante" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <input id="Visitante" name="tipoUsuario" type="radio" class="custom-control-input" required="" value="1">
             <label class="custom-control-label" for="Visitante">Visitante</label>
         </div>
         <!--Tipo Aluno-->
         <div class="d-block ">
             <div class="custom-control custom-radio">
-                <input id="Aluno" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="collapse" data-target="#demo"
+                <input id="Aluno" name="tipoUsuario" type="radio" class="custom-control-input" data-toggle="collapse" value="4" data-target="#demo"
                     checked="" required="">
                 <label class="custom-control-label" for="Aluno">Aluno</label>
             </div>
             <div id="demo" class="collapse">
                 <!--Inserir Lógica-->
                 <div class="row mt-2 mb-3">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <!--Seleção de Curso-->
                         <label for="state">Curso</label>
-                        <select class="custom-select d-block w-100" id="state" required="">
+                        <select class="custom-select d-block w-100" name="curso"  id="curso" required="">
                             <option value="">Escolha</option>
-                            <option>ADS</option>
-                            <option>LOG</option>
-                            <option>ADM</option>
-                            <option>ENF</option>
+                            <option value="ADS">ADS</option>
+                            <option value="LOG">LOG</option>
+                            <option value="GE">GE</option>
+                            
                         </select>
                     </div>
                     <!--Nascimento-->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <!--Seleção de Curso-->
                         <label for="state">Semestre</label>
-                        <select class="custom-select d-block w-100" id="state" required="">
+                        <select class="custom-select d-block w-100"  name="semestre" id="semestre" required="">
                             <option value="">Escolha</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
                         </select>
                     </div>
-                    <div class="col-md-4">
-                        <!--Seleção de Curso-->
+                    <div class="col-md-3">
+                        <!--Seleção de Turno-->
                         <label for="state">Turno</label>
-                        <select class="custom-select d-block w-100" id="state" required="">
+                        <select class="custom-select d-block w-100" name="turno" id="state" required="">
                             <option value="">Escolha</option>
-                            <option>Manhã</option>
-                            <option>Tarde</option>
-                            <option>Noite</option>
+                            <option value="M">Manhã</option>
+                            <option value="T">Tarde</option>
+                            <option value="N">Noite</option>
                         </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="firstName">Matricula</label>
+                        <input type="text" class="form-control" name="matricula" id="matricula" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            A Matricula é Obrigatório.
+                        </div>
                     </div>
                 </div>
+              
             </div>
 
             <!--Tipo Funcionário-->
             <div class="custom-control custom-radio">
-                <input id="Funcionário" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="collapse" data-target="#demo1"
+                <input id="Funcionário" name="tipoUsuario" type="radio" value="" class="custom-control-input" data-toggle="collapse" data-target="#demo1"
                     required="">
                 <label class="custom-control-label" for="Funcionário">Funcionário</label>
             </div>
@@ -123,7 +135,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-3 mt-2">
                         <label for="firstName">Matricula</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                        <input type="text" class="form-control" name="matricula" id="firstName" placeholder="" value="" required="">
                         <div class="invalid-feedback">
                             A Matricula é Obrigatório.
                         </div>
@@ -134,7 +146,7 @@
 
         <!--Tipo Professor-->
         <div class="custom-control custom-radio">
-            <input id="Professor" name="paymentMethod" type="radio" class="custom-control-input" data-toggle="collapse" data-target="#demo2"
+            <input id="Professor" name="tipoUsuario" type="radio" value="2" class="custom-control-input" data-toggle="collapse" data-target="#demo2"
                 required="">
             <label class="custom-control-label" for="Professor">Professor</label>
         </div>
@@ -143,7 +155,7 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="firstName">Matricula</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    <input  type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                     <div class="invalid-feedback">
                         A Matricula é Obrigatório.
                     </div>
@@ -155,5 +167,5 @@
                 <button class="btn btn-primary btn-lg btn-block mt-5 mx-2" type="submit">Salvar</button>
             </div>
         </div>
-    </form>
+  </form>
 </div>

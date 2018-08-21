@@ -23,4 +23,11 @@ export class EventoService {
       "id": id
     });
   }
+
+  public getNumeroInscritos(id : number, nome: string) {
+    return this.http.post<IAgendamento[]>("http://localhost:8080/atividade/inscricao/listarAtividade/", {
+      "id": id,
+      "nome": nome
+    });
+  }
 }
