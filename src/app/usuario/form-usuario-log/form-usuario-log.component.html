@@ -152,13 +152,45 @@
           </div>
       </div>
       <div class="row">
-            <div class="col-sm-3 mt-3">
+            <div class="col col-sm-3 mt-3">
                     <button class="btn btn-warning btn-dm btn-block " type="submit">
-                            <span class="glyphicon glyphicon-pencil">Alterar</span> </button>
+                        <span>Alterar</span> 
+                    </button>
             </div>
-          <div class="col-sm-3 mt-3">
-              <button class="btn btn-danger btn-dm btn-block  float-right" type="submit">Excluir</button>
-          </div>          
+          <div class="col col-sm-3 mt-3">
+              <button class="btn btn-danger btn-dm btn-block " data-toggle="modal" data-target="#myModal" type="submit">Excluir</button>
+          
+          <!-- The Modal t-->
+            <div class="modal" id="myModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            
+            <div class="modal-header">
+                <h5>Deseja excluir realmente?</h5>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                    <button type="button" class="btn btn-light mt-4" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger mt-4" data-dismiss="modal">Excluir</button>
+            </div>
+
+          </div>
+        </div>
       </div>
+          
+        
+        
+        </div>
+
+
+
+
+          <!--QR COD Usuário -->  
+          <div class="col-sm-6">
+            <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl={{usuario.id}}">
+        </div>           
+      </div>
+      
   </form>
 </div>

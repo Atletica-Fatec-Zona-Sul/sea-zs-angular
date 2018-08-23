@@ -1,0 +1,11 @@
+
+/*Configuração */
+div.col.col-sm-3.mt-3{
+    padding-top: 9%;
+}
+
+div.modal-body{
+
+    height: 120px;
+    width: 60%;
+}

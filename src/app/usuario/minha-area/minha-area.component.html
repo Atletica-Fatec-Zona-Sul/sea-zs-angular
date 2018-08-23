@@ -1,18 +1,14 @@
 <!-- ====================================== TELA MINHA ÁREA ===================================== -->
 <div class="container">
-  <h1>Minha Área</h1>
+  <h1>Bem vindo {{usuario.nome}}</h1>
   <hr>
-  <div class="container">
-    <h3>Bem vindo {{usuario.nome}}</h3>
-    <p>Abaixo está o seu QR Code para validação de presença nas atividades:</p>
-    <div class="col-md-6 mb-3">
-        <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl={{usuario.id}}">
-        </div>
+  <div class="container">    
+   
     <!--=================== MEU CADASTRO ===================-->
     <div id="accordion">
-      <div class="card ">
-        <div class="card-header">
-          <a class="card-link text-dark" data-toggle="collapse" href="#collapseOne">Meu Cadastro</a>
+      <div class="card">
+        <div class="card-header bg-danger">
+          <a class="card-link  text-white" data-toggle="collapse" href="#collapseOne">Meu Cadastro</a>
         </div>
         <div id="collapseOne" class="collapse show" data-parent="#accordion">
           <div class="card-body">
@@ -25,94 +21,76 @@
       
 
        <!-- ============== PONTUAÇÃO PARTICIPANTE ==================-->
-      <div class="card">
-        <div class="card-header ">
-          <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseTwo">Pontuação</a>
-        </div>
-        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-          <div class="card-body table-responsive">
-            <table class="table table-hover ">
-              <thead>
-                <tr>
-                  <th scope="col">COD</th>
-                  <th scope="col">Tipo</th>
-                  <th scope="col">Pontuação</th>
-                  <th scope="col">Data</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table-success">
-                  <th scope="row">1</th>
-                  <td>Semestral</td>
-                  <td>50</td>
-                  <td>AA/MM/YYYY</td>
-                </tr>
-                <tr class="table-danger">
-                  <th scope="row">2</th>
-                  <td>Anual</td>
-                  <td>100</td>
-                  <td>AA/MM/YYYY</td>
-                </tr>
-                <tr class="table-warning">
-                  <th scope="row">3</th>
-                  <td>Total</td>
-                  <td>200</td>
-                  <td>AA/MM/YYYY</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+       <div class="table-responsive">
+        <table class="table table-hover ">
+          <thead>
+            <tr>
+              <th scope="col">COD</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Pontuação</th>
+              <th scope="col">Data do Evento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-success">
+              <th scope="row">1</th>
+              <td>Semestral</td>
+              <td>50</td>
+              <td>AA/MM/YYYY</td>
+            </tr>
+            <tr class="table-warning">
+              <th scope="row">2</th>
+              <td>Anual</td>
+              <td>100</td>
+              <td>AA/MM/YYYY</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">3</th>
+              <td>Total</td>
+              <td>200</td>
+              <td>AA/MM/YYYY</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseThree">
-            Minhas Atividade
-          </a>
-        </div>
-        <div id="collapseThree" class="collapse " data-parent="#accordion">
-          <div class="card-body">
-
-            <!-- CARROSSEL-->
-            <div id="carro" class="carousel slide container-carrossel " data-ride="carousel">
-
-              <!-- Indicadores -->
-              <ul class="carousel-indicators ">
-                <li data-target="#carro" data-slide-to="0" class="active"></li>
-                <li data-target="#carro" data-slide-to="1"></li>
-                <li data-target="#carro" data-slide-to="2"></li>
-              </ul>
-              <!-- O slideshow imagens-->
-              <div class="carousel-inner">
-                <div class="carousel-item active ">
-                  <img src="/src/assets/img/p.jpg" class="img-thumbnail" alt="Los Angeles" width="1100" height="500">
-                </div>
-                <div class="carousel-item">
-                  <img src="/src/assets/img/p2.jpg" class="img-thumbnail" alt="Chicago" width="1100" height="500">
-                </div>
-                <div class="carousel-item">
-                  <img src="/src/assets/img/p1.jpg" class="img-thumbnail" alt="New York" width="1100" height="500">
-                </div>
-                <p class="text-justify">
-                  <strong>Note:</strong> Agora a
-                  <strong> Fatec</strong> Acadêmicos da Fatec Zona Sul, Sejam Bem Vindos! A Fatec Zona Sul preparou um semestre especial
-                  à todos! Em 2018 a Fatec Zona Sul completa 12 anos e você faz parte desta conquista! Participe! Divulgue!
-                  Interaja! Vibre! #SouFatecZonaSul.
-                </p>
-              </div>
-              <!-- Controle esquerda e direita -->
-              <a class="carousel-control-prev" href="#carro" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a class="carousel-control-next" href="#carro" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </a>
-            </div>
-            <!--FIM CARROSSEL-->
-
-          </div>
-        </div>
-      </div>
+    <!--================ APLICAÇÃO DE DICIPLINA ==================-->
+    <div class="container ">
+      <h2>Atividades</h2>
+      <table class="table table-responsive-sm">
+        <thead class="table-active">
+          <tr>
+            <th>Código </th>
+            <th>Nome</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>135624563457</td>
+            <td>Matematica</td>
+            <td class="btn-group">
+              <button class="btn btn-sucess btn-sm " type="submit">+</button>
+              <button class="btn btn-danger btn-sm " type="submit">x</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4563457345557</td>
+            <td>Gestão e Governança</td>
+            <td class="btn-group">
+              <button class="btn btn-primary btn-sm " type="submit">+</button>
+              <button class="btn btn-danger btn-sm " type="submit">x</button>
+            </td>
+          </tr>
+          <tr>
+            <td>34573457345734</td>
+            <td>Java</td>
+            <td class="btn-group">
+              <button class="btn btn-primary btn-sm " type="submit">+</button>
+              <button class="btn btn-danger btn-sm " type="submit">x</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
