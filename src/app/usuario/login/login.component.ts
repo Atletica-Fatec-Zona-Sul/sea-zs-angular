@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.usuario = new IUsuario();
-    if(this.usuario != null) {
+    if(this.usuario.id) {
       this.router.navigate(['/usuario-inicio']);
     }
     this.loginForm = this.formBuilder.group({
