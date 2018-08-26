@@ -1,19 +1,16 @@
-<div class="container">
-  <!--Cabeçalho-->
+<div class="container"> <!--Cabeçalho-->
   <h4 class="mb-3 mt-3">Cadastro de Cursos</h4>
   <form class="needs-validation" novalidate="">
     <!--Curso-->
     <div class="row">
-      <div class="col mb-3">
-        <label for="firstName">Nome</label>
-        <input class="form-control" id="firstName" placeholder="" value="" required="" type="text">
+      <div class="col mb-3"> <label for="firstName">Nome</label> <input class="form-control"
+          id="firstName" placeholder="" value="" required="" type="text">
         <div class="invalid-feedback"> O nome é Obrigatório. </div>
       </div>
     </div>
     <!--Modalidade-->
     <div class="row">
-      <div class="col-md-4 mb-3">
-        <label for="state">Modalidade</label>
+      <div class="col-md-4 mb-3"> <label for="state">Modalidade</label>
         <select class="custom-select d-block w-100" id="state" required="">
           <option value="">Escolha</option>
           <option>EAD</option>
@@ -21,8 +18,7 @@
         </select>
       </div>
       <!--Quantidade de Semestres-->
-      <div class="col-md-4 mb-3">
-        <label for="state">Semestres</label>
+      <div class="col-md-4 mb-3"> <label for="state">Semestres</label>
         <select class="custom-select d-block w-100" id="state" required="">
           <option value="">Escolha</option>
           <option>1</option>
@@ -36,63 +32,56 @@
       <!--Salvar-->
       <div class="col">
         <div class="float-right">
-          <button type="button" class="btn btn-primary btn-block btn_salvar">Salvar</button>
-        </div>
+        <button type="button" class="btn btn-primary btn-block btn_salvar">Salvar</button> </div>
       </div>
     </div>
     <!--Tabela-->
-    <div class="container">
       <h2>Cursos</h2>
       <table class="table table-responsive-sm">
-        <thead class="table-active">
+        <thead class="table-active thead-dark">
           <tr>
             <th>ID</th>
             <th>Curso</th>
-            <th class="">Modalidade</th>
+            <th>Modalidade</th>
             <th>Semestres</th>
-            <th class="">Disciplinas</th>
+            <th>Disciplinas</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
             <td>Analise e Dev. de Sistemas</td>
-            <td class="">EAD</td>
+            <td class=>EAD</td>
             <td>6</td>
-            <td class="btn-group">
-              <button type="button" class="btn btn-sm btn-primary">Adicionar</button>
-              <button type="button" class="btn btn-sm btn-success">Editar</button>
-            </td>
+            <td class="btn-group AdicEdit">
+            <button class="btn btn-primary btn-sm AdicEdit" type="submit"><a href="facebook.com" class="text-white">Adicionar</a></button>
+            <button class="btn btn-success btn-sm AdicEdit" type="submit"><a href="google.com" class="text-white">Editar</a></button></td>
           </tr>
           <tr>
             <td>2</td>
             <td>Logistica</td>
-            <td class=" ">Presencial</td>
+            <td class="">Presencial</td>
             <td>6</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">Adicionar</button>
-              <button class="btn btn-success btn-sm " type="submit">Editar</button>
-            </td>
+           <td class="btn-group AdicEdit">
+            <button class="btn btn-primary btn-sm AdicEdit" type="submit"><a href="facebook.com" class="text-white">Adicionar</a></button>
+            <button class="btn btn-success btn-sm AdicEdit" type="submit"><a href="google.com" class="text-white">Editar</a></button></td>
           </tr>
           <tr>
             <td>3</td>
             <td>Administração</td>
-            <td class=" ">Presencial</td>
+            <td class="">Presencial</td>
             <td>4</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">Adicionar</button>
-              <button class="btn btn-success btn-sm " type="submit">Editar</button>
-            </td>
+            <td class="btn-group AdicEdit">
+            <button class="btn btn-primary btn-sm AdicEdit" type="submit"><a href="facebook.com" class="text-white">Adicionar</a></button>
+            <button class="btn btn-success btn-sm AdicEdit" type="submit"><a href="google.com" class="text-white">Editar</a></button></td>
           </tr>
         </tbody>
       </table>
-    </div>
     <!--Seleção de tipo de Usuario-->
     <hr>
-    <div class="container">
       <h2>Disciplinas</h2>
       <table class="table table-responsive-sm">
-        <thead class="table-active">
+        <thead class="table-active thead-dark">
           <tr>
             <th>Código SIGA</th>
             <th>Nome</th>
@@ -103,29 +92,25 @@
           <tr>
             <td>135624563457</td>
             <td>Matematica</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">+</button>
-              <button class="btn btn-danger btn-sm " type="submit">x</button>
-            </td>
+            <td class="btn-group AdicEdit">
+            <button class="btn btn-primary btn-sm AdicEdit" type="submit">+</button>
+            <button class="btn btn-danger btn-sm AdicEdit" type="submit">x</button></td>
           </tr>
           <tr>
             <td>4563457345557</td>
             <td>Gestão e Governança</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">+</button>
-              <button class="btn btn-danger btn-sm " type="submit">x</button>
-            </td>
+            <td class="btn-group AdicEdit">
+            <button class="btn btn-primary btn-sm AdicEdit" type="submit">+</button>
+            <button class="btn btn-danger btn-sm AdicEdit" type="submit">x</button></td>
           </tr>
           <tr>
-            <td>34573457345734</td>
+           <td>34573457345734</td>
             <td>Java</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">+</button>
-              <button class="btn btn-danger btn-sm " type="submit">x</button>
-            </td>
+            <td class="btn-group AdicEdit">
+            <button class="btn btn-primary btn-sm AdicEdit" type="submit">+</button>
+            <button class="btn btn-danger btn-sm AdicEdit" type="submit">x</button></td>
           </tr>
         </tbody>
       </table>
-    </div>
   </form>
 </div>

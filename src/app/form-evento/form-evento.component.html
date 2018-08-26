@@ -1,0 +1,195 @@
+<div class="container">
+	<!--Cabeçalho-->
+	<h4 class="mb-3 mt-3">Cadastro de Eventos</h4>
+	<form class="needs-validation" novalidate="">
+		<!--Evento-->
+		<div class="row">
+		<div class="col mb-3">
+			<label>Nome</label>
+			<input class="form-control" id="firstName" placeholder="" value="" required="" type="text"> </div>
+		</div>
+		<div class="row">
+		<div class="col-md-6 mb-3">
+		<label for="state">Curso</label>
+		<select class="custom-select d-block w-100" id="state" required="">
+			<option value="">Escolha</option>
+			<option>ADS</option>
+			<option>Logistica</option>
+		</select>
+		</div>
+		<div class="col-md-6 mb-3">
+		<!--Local-->
+		<label>Local</label>
+		<input class="form-control" type="text">
+		<div class="invalid-feedback"> O Local é Obrigatório. </div>
+		</div>
+		</div>
+<div class="row">
+	<div class="col mb-3">
+		<label>Descrição</label>
+		<textarea class="form-control" rows="4" value="" required=""></textarea>
+		<div class="invalid-feedback"> O nome é Obrigatório. </div>
+	</div>
+</div>
+<!--Data de Inicio-->
+<div class="row">
+	<div class="col-md-6 mb-3">
+		<label for="dataInicio">Inicio</label>
+		<input class="form-control input-group" type="date" id="dataInicio" name="dataInicio" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span>
+	</div>
+	<!--Data Fim-->
+	<div class="col-md-6 mb-3">
+		<label for="dataFim">Fim</label>
+		<input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span>
+	</div>
+	<!--Salvar-->
+	<div class="col">
+		<div class="float-right">
+		<button type="button" class="btn btn-primary btn-block btn_salvar">Salvar</button>
+		</div>
+	</div>
+	</div>
+	<!--Tabela-->
+	<!--Edição de Eventos-->
+		<h2>Eventos</h2>
+		<table class="table table-responsive-sm">
+		<thead class="table-active thead-dark">
+			<tr>
+				<th>Nome</th>
+				<th>Inicio</th>
+				<th>Fim</th>
+				<th>Agendamento</th>         
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Semana de Tecnologia</td>
+				<td>18/03/2018</td>
+				<td>27/03/2018</td>
+				<td class="btn-group AdicEdit">
+				<button type="button" class="btn btn-sm btn-primary AdicEdit">Adicionar</button>
+				<button type="button" class="btn btn-sm btn-success AdicEdit">Editar</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Semana de Tecnologia</td>
+				<td>18/07/2018</td>
+				<td>27/07/2018</td>
+				<td class="btn-group AdicEdit">
+				<button type="button" class="btn btn-sm btn-primary AdicEdit">Adicionar</button>
+				<button type="button" class="btn btn-sm btn-success AdicEdit">Editar</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Semana de Tecnologia</td>
+				<td>18/09/2018</td>
+				<td>27/09/2018</td>
+				<td class="btn-group AdicEdit">
+				<button type="button" class="btn btn-sm btn-primary AdicEdit">Adicionar</button>
+				<button type="button" class="btn btn-sm btn-success AdicEdit">Editar</button>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	<!--Edição de Agendamento-->
+	<hr>
+		<h2>Agendamento</h2>
+		<table class="table table-responsive-sm">
+		<thead class="table-active thead-dark">
+			<tr>            
+				<th>Inicio</th>
+				<th>Fim</th>
+				<th>Organizador</th>
+				<th>Pontuação Staff</th>
+				<th> </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" type="time"/></td>
+				<td><input class="form-control" type="time"/></td>
+				<td><input class="form-control"/>
+				<td><input class="form-control col-sm-3"/>
+				<td class="btn-group AdicEdit">
+				<button class="btn btn-primary btn-sm AdicEdit" type="submit">+</button>
+				<button class="btn btn-danger btn-sm AdicEdit" type="submit">x</button>
+				</td>
+			</tr>
+			<tr>
+				<td><input class="form-control" type="time"/></td>
+				<td><input class="form-control" type="time"/></td>
+				<td><input class="form-control"/>
+				<td><input class="form-control col-sm-3"/>
+				<td class="btn-group AdicEdit">
+				<button class="btn btn-primary btn-sm AdicEdit" type="submit">+</button>
+				<button class="btn btn-danger btn-sm AdicEdit" type="submit">x</button>
+				</td>
+			</tr>
+			<tr>
+			<td><input class="form-control" type="time"/></td>
+				<td><input class="form-control" type="time"/></td>
+				<td><input class="form-control"/>
+				<td><input class="form-control col-sm-3"/>
+				<td class="btn-group AdicEdit">
+				<button class="btn btn-primary btn-sm AdicEdit" type="submit">+</button>
+				<button class="btn btn-danger btn-sm AdicEdit" type="submit">x</button>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+			<!--Edição de Atividades-->
+	<h2>Atividades</h2>
+		<table class="table table-responsive-sm">
+		<thead class="table-active thead-dark">
+			<tr>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Inicio</th>
+				<th>Fim</th>
+				<th>Pontuação</th>
+				<th>Duração</th>
+				<th>Categoria</th>
+				<th>Local</th>
+				<th>Vagas</th>         
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Palestra Curriculum</td>
+				<td><input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span></td>
+				<td><input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span></td>
+				<td class="btn-group AdicEdit">
+				<button type="button" class="btn btn-sm btn-primary AdicEdit">Adicionar</button>
+				<button type="button" class="btn btn-sm btn-success AdicEdit">Editar</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Semana de Pantera</td>
+				<td><input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span></td>
+				<td><input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span></td>
+				<td class="btn-group AdicEdit">
+				<button type="button" class="btn btn-sm btn-primary AdicEdit">Adicionar</button>
+				<button type="button" class="btn btn-sm btn-success AdicEdit">Editar</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Semana de Moda</td>
+				<td><input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span></td>
+				<td><input class="form-control input-group" type="date" id="dataFim" name="dataFim" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+		<span class="validity"></span></td>
+				<td class="btn-group AdicEdit">
+				<button type="button" class="btn btn-sm btn-primary AdicEdit">Adicionar</button>
+				<button type="button" class="btn btn-sm btn-success AdicEdit">Editar</button>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+</form>
+</div>
