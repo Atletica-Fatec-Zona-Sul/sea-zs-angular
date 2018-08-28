@@ -1,6 +1,6 @@
 <div class="container">
   <!--Cabeçalho-->
-  <h4 class="mb-3 mt-3">Cadastro de usuario</h4>
+  <h4 class="mb-3 mt-3">Cadastro de usuário</h4>
   <form class="needs-validation" novalidate="">
       <!--Nome-->
       <div class="row">
@@ -153,39 +153,45 @@
       </div>
       <div class="row">
             <div class="col col-sm-3 mt-3">
-                    <button class="btn btn-warning btn-dm btn-block " type="submit">
+                    <button class="btn btn-warning btn-dm btn-block "  data-toggle="modal" data-target="#myAlter" type="submit">
                         <span>Alterar</span> 
-                    </button>
+                    </button>            
+                <!-- The Modal Alterar-->
+                <div class="modal" id="myAlter">
+                <div class="modal-dialog">
+                <div class="modal-content">                
+                <div class="modal-header">
+                    <h5>Deseja alterar realmente?</h5>
+                </div>    
+                <!-- Modal body Alterar -->
+                <div class="modal-body">
+                        <button type="button" class="btn btn-secondary mt-4" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-warning ml-2 mt-4" data-dismiss="modal">Alterar</button>
+                </div>    
+                </div>
+                </div>
+                </div>      
             </div>
           <div class="col col-sm-3 mt-3">
-              <button class="btn btn-danger btn-dm btn-block " data-toggle="modal" data-target="#myModal" type="submit">Excluir</button>
+              <button class="btn btn-danger btn-dm btn-block " data-toggle="modal" data-target="#myModal" type="submit">Desativar</button>
           
-          <!-- The Modal t-->
+            <!-- The Modal t-->
             <div class="modal" id="myModal">
             <div class="modal-dialog">
-            <div class="modal-content">
-            
+            <div class="modal-content">            
             <div class="modal-header">
-                <h5>Deseja excluir realmente?</h5>
+                <h5>Deseja desativar sua conta?</h5>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                    <button type="button" class="btn btn-light mt-4" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger mt-4" data-dismiss="modal">Excluir</button>
+                    <button type="button" class="btn btn-secondary mt-4" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger ml-1 mt-4" data-dismiss="modal">Desativar</button>
             </div>
-
-          </div>
+            </div>
+            </div>
+            </div> 
         </div>
-      </div>
-          
-        
-        
-        </div>
-
-
-
-
           <!--QR COD Usuário -->  
           <div class="col-sm-6">
             <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl={{usuario.id}}">

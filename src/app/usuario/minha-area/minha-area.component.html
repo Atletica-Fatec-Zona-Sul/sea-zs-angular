@@ -1,13 +1,13 @@
 <!-- ====================================== TELA MINHA ÁREA ===================================== -->
 <div class="container">
-  <h1>Bem vindo {{usuario.nome}}</h1>
+  <h1>Bem-vindo {{usuario.nome}}</h1>
   <hr>
   <div class="container">    
    
     <!--=================== MEU CADASTRO ===================-->
     <div id="accordion">
       <div class="card">
-        <div class="card-header bg-danger">
+        <div class="card-header bg-primary">
           <a class="card-link  text-white" data-toggle="collapse" href="#collapseOne">Meu Cadastro</a>
         </div>
         <div id="collapseOne" class="collapse show" data-parent="#accordion">
@@ -53,40 +53,37 @@
           </tbody>
         </table>
       </div>
-    <!--================ APLICAÇÃO DE DICIPLINA ==================-->
+    <!--================ APLICAÇÃO DE ATIVIDADE ==================-->
     <div class="container ">
       <h2>Atividades</h2>
       <table class="table table-responsive-sm">
-        <thead class="table-active">
+        <thead class="table-active thead-dark">
           <tr>
-            <th>Código </th>
-            <th>Nome</th>
+            <th colspan="2">Nome </th>
+            <th>Pontuação</th>
             <th> </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>135624563457</td>
-            <td>Matematica</td>
-            <td class="btn-group">
-              <button class="btn btn-sucess btn-sm " type="submit">+</button>
-              <button class="btn btn-danger btn-sm " type="submit">x</button>
+            <td colspan="2">Programação</td>
+            <td>50,00</td>
+            <td colspan="2" class="text-center">
+              <button class="btn btn-success btn-sm" type="submit">Certificado</button>
             </td>
           </tr>
           <tr>
-            <td>4563457345557</td>
-            <td>Gestão e Governança</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">+</button>
-              <button class="btn btn-danger btn-sm " type="submit">x</button>
+            <td colspan="2">Banco de Dados</td>
+            <td>100,00</td>
+            <td colspan="2" class="text-center">        
+              <button class="btn btn-success btn-sm" type="submit">Certificado</button>
             </td>
           </tr>
           <tr>
-            <td>34573457345734</td>
-            <td>Java</td>
-            <td class="btn-group">
-              <button class="btn btn-primary btn-sm " type="submit">+</button>
-              <button class="btn btn-danger btn-sm " type="submit">x</button>
+            <td colspan="2">Programação Web</td>
+            <td>130,00</td>
+            <td colspan="2" class="text-center">
+              <button class="btn btn-success btn-sm" type="submit">Certificado</button>
             </td>
           </tr>
         </tbody>
