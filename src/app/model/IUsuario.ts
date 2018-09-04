@@ -23,7 +23,13 @@ export class IUsuario  {
             this.email = sessionStorage.getItem("usuario.email");
             this.adm = "true" == sessionStorage.getItem("usuario.adm");
             this.tipoUsuario = Number.parseInt(sessionStorage.getItem("usuario.tipoUsuario"));
-            this.nome = sessionStorage.getItem("usuario.nome");
-            this.nome = sessionStorage.getItem("usuario.nome");
+            this.rg = sessionStorage.getItem("usuario.rg");
+            this.endereco = sessionStorage.getItem("usuario.endereco");
+            this.celular = sessionStorage.getItem("usuario.celular");
+            this.dataNasc = new Date( Date.parse(sessionStorage.getItem("usuario.dataNasc")));
+            console.log(this.dataNasc);
+            this.turno = sessionStorage.getItem("usuario.turno");
+            this.genero = sessionStorage.getItem("usuario.genero");
+            this.matricula = sessionStorage.getItem("usuario.matricula");
         }
     }

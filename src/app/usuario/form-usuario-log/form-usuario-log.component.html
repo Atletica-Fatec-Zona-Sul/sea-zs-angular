@@ -51,7 +51,7 @@
           <!--Nascimento-->
           <div class="col-md-6 mb-3">
               <label for="bday">Data de Nascimento</label>
-              <input class="form-control" type="date" id="bday" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+              <input class="form-control" type="date" id="bday" name="bday" value="{{usuario.dataNasc | date: 'yyyymmdd'}}" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
               <span class="validity"></span>
           </div>
           <div>

@@ -32,8 +32,17 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("usuario.email", this.usuario.email.toString());
           sessionStorage.setItem("usuario.nome", this.usuario.nome.toString());
           sessionStorage.setItem("usuario.adm", this.usuario.adm.toString());
+          sessionStorage.setItem("usuario.rg", this.usuario.rg.toString());
+          sessionStorage.setItem("usuario.endereco", this.usuario.endereco.toString());
+          sessionStorage.setItem("usuario.celular", this.usuario.celular.toString());
+          sessionStorage.setItem("usuario.dataNasc", this.usuario.dataNasc.toString());
+         // sessionStorage.setItem("usuario.semestre", this.usuario.semestre.toString());
+          sessionStorage.setItem("usuario.turno", this.usuario.turno.toString());
+          sessionStorage.setItem("usuario.genero", this.usuario.genero.toString());
           sessionStorage.setItem("usuario.tipoUsuario", this.usuario.tipoUsuario.toString());
+        
           this.router.navigate(['/usuario-inicio']);
+        
         }
       });
       console.log(this.usuario);
