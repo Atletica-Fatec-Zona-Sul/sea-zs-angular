@@ -36,6 +36,7 @@
         <button type="button" class="btn btn-primary btn-block btn_salvar">Salvar</button> </div>
       </div>
     </div>
+  </form>
     <!--Tabela-->
       <h2>Cursos</h2>
       <table class="table table-responsive-sm">
@@ -49,33 +50,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Analise e Dev. de Sistemas</td>
-            <td>EAD</td>
-            <td>6</td>
+          <tr *ngFor="let curso of cursos">
+            <td>{{curso.id}}</td>
+            <td>{{curso.nome}}</td>
+            <td>{{curso.modalidade}}</td>
+            <td>{{curso.qtdSemestres}}</td>
             <td class="btn-group AdicEdit">
             <button class="btn btn-primary btn-sm AdicEdit" type="submit"><a href="facebook.com" class="text-white">Adicionar</a></button>
             <button class="btn btn-success btn-sm AdicEdit" type="submit"><a href="google.com" class="text-white">Editar</a></button></td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>Logistica</td>
-            <td class="">Presencial</td>
-            <td>6</td>
-           <td class="btn-group AdicEdit">
-            <button class="btn btn-primary btn-sm AdicEdit" type="submit"><a href="facebook.com" class="text-white">Adicionar</a></button>
-            <button class="btn btn-success btn-sm AdicEdit" type="submit"><a href="google.com" class="text-white">Editar</a></button></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Administração</td>
-            <td class="">Presencial</td>
-            <td>4</td>
-            <td class="btn-group AdicEdit">
-            <button class="btn btn-primary btn-sm AdicEdit" type="submit"><a href="facebook.com" class="text-white">Adicionar</a></button>
-            <button class="btn btn-success btn-sm AdicEdit" type="submit"><a href="google.com" class="text-white">Editar</a></button></td>
-          </tr>
+          
         </tbody>
       </table>
     <!--Seleção de tipo de Usuario-->
@@ -113,5 +97,4 @@
           </tr>
         </tbody>
       </table>
-  </form>
 </div>

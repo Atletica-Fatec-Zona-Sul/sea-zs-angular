@@ -1,45 +1,27 @@
-<br><br><br>
+
 
 <div class="container">
-    <!--Cabeçalho-->
-    <div class="row">
-        <div class="col-md-6 mb-3">
-      <h4 class="mb-3 mt-3">{{atividade.nome}}</h4>
-    </div>
-    <div class="col-md-4 mb-3">
-        <p class="mb-3 mt-3"><b>Data: </b>{{atividade.inicioAtividade | date: 'dd/MM/yyyy HH:mm'}}<span *ngIf="atividade.flagContinua"> - {{atividade.fimAtividade | date: 'dd/MM/yyyy HH:mm'}}</span></p>
-      </div>
-      <div class="col-md-2 mb-3 ">
-          <p class="mb-3 mt-3"> Pontuação:
-         {{atividade.pontuacaoParticipante}}  </p>
-      </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3 mb-3 ">
-            <p class="mb-3 mt-3"> <b>Categoria:</b>
-           {{atividade.categoria}}  </p>
-        </div>
-        <div class="col-md-3 mb-3 ">
-            <p class="mb-3 mt-3"> <b>Local:</b>
-           {{atividade.localAtividade}}  </p>
-        </div>
-        <div class="col-md-3 mb-3 ">
-            <p class="mb-3 mt-3"> <b>Carga Horária:</b>
-           {{atividade.cargaHoraria}} horas </p>
-        </div>
-        <div class="col-md-3 mb-3 ">
-            <p class="mb-3 mt-3"> <b>Quantidade de Vagas:</b>
-           {{atividade.qtdVagas}}  </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 ">
-        <p class="mb-3 mt-3"> <b>Descrição:</b></p></div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 ">
-            <p class="mb-12 "> {{atividade.descricao}}</p></div>
-      
-    </div>
+        <table class="table table-houver">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center">Atividade</th>
+                        <th class="text-center">Dia</th>
+                        <th class="text-center">Duração</th>
+                        <th class="text-center">Local</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td class="text-center">{{atividade.nome}}</td>
+                        <td class="text-center">{{atividade.inicioAtividade | date: 'dd/MM/yyyy'}}</td>
+                        <td class="text-center">{{atividade.inicioAtividade | date: 'HH:mm'}} - {{atividade.fimAtividade | date:
+                            'HH:mm'}}
+                        </td>
+                        <td class="text-center">{{atividade.localAtividade}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {{atividade.descricao}}<br>
+            <a [routerLink]="['/form-evento']" class="btn btn-success">Inscriver-se no Evento</a>
+            <a [routerLink]="['/form-evento']" class="btn btn-primary">Validação de Presença</a>
        </div>

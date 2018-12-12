@@ -2,9 +2,10 @@
   <app-barra-navegacao></app-barra-navegacao>
   <h2>Bem vindo {{usuario.nome}},</h2>
   <h4>Abaixo estão listados os Eventos da Fatec Zona Sul:</h4>
+  
+  <a [routerLink]="['/form-evento']" class="btn btn-success">Cadastrar Evento</a>
 
-  <div class="row">
-
+  <div class="row"><br>
     <div class="col-md-4" *ngFor="let evento of eventos">
       <div class="card text-left mb-4 box-shadow">
         <div class="card-header">
@@ -13,7 +14,7 @@
         <div class="card-body">
           <h5 class="card-title">{{evento.inicio | date: 'dd/MM/yyyy'}} à {{evento.fim | date: 'dd/MM/yyyy'}}</h5>
           <p class="card-text">{{evento.descricao}}</p>
-          <a [routerLink]="['/consulta-evento', evento.id, evento.nome]" class="btn btn-primary">Saiba mais</a>
+          <a [routerLink]="['/consulta-evento', evento.id, evento.nome, evento.descricao]" class="btn btn-primary">Saiba mais</a>
         </div>
         <div class="card-footer text-muted">
           Informações Importantes.

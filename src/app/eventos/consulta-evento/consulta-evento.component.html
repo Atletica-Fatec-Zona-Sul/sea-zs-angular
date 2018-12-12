@@ -2,33 +2,14 @@
 <div class="container">
     <div class="header-style table-responsive">
         <h2>Evento: {{nome}}</h2>
+        {{descricao}}
         <hr>
         <p>Abaixo estão listados de Atividades:</p>
-        <table class="table table-houver">
-            <thead class="thead-dark">
-                <tr>
-                    <th class="text-center">Atividade</th>
-                    <th class="text-center">Dia</th>
-                    <th class="text-center">Duração</th>
-                    <th class="text-center">Local</th>
-                </tr>
-            </thead>
-            <tbody *ngFor="let agendamento of agendamentos">
-                <tr [routerLink]="['/consulta-atividade', atividade]" *ngFor="let atividade of agendamento.atividades">
-                    <td class="text-center"><a [routerLink]="['/consulta-atividade', atividade]">{{atividade.nome}}</a></td>
-                    <td class="text-center">{{agendamento.inicio | date: 'dd/MM/yyyy'}} - {{agendamento.fim | date: 'dd/MM/yyyy'}}</td>
-                    <td class="text-center">{{atividade.inicioAtividade | date: 'HH:mm'}} - {{atividade.fimAtividade | date:
-                        'HH:mm'}}
-                    </td>
-                    <td class="text-center">{{atividade.localAtividade}}</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 
 
-<div class="container" *ngFor="let agendamento of agendamentos">
+<div class="container row" style="margin-left:140px" *ngFor="let agendamento of agendamentos" >
     <div class="card" style="width:380px; margin: 4%; padding: 4%;" *ngFor="let atividade of agendamento.atividades">
         <h2>{{atividade.nome}}</h2>
         <p> {{agendamento.inicio | date: 'dd/MM/yyyy'}} - {{agendamento.fim | date: 'dd/MM/yyyy'}}</p>
@@ -37,7 +18,7 @@
                 <h4 class="card-title"> {{agendamento.usuarioOrganizador.nome}}</h4>
                 <p>Local: {{atividade.localAtividade}}: {{atividade.inicioAtividade | date: 'HH:mm'}} - {{atividade.fimAtividade
                     | date: 'HH:mm'}}</p>
-                <a [routerLink]="['/consulta-atividade', atividade]" class="btn btn-primary text-white">See Profile</a>
+                <a [routerLink]="['/consulta-atividade', atividade]" class="btn btn-primary text-white">Ver mais</a>
             </div>
         </div>
     </div>

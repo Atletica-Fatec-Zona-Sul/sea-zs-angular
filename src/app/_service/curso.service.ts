@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { IEvento } from '../model/IEvento';
 import { IAgendamento } from '../model/IAgendamento';
 import { IUsuario } from '../model/IUsuario';
+import { ICurso } from '../model/ICurso';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EventoService {
+export class CursoService {
   usuarioLogado = new IUsuario();
   public inserirEvento(evento: IEvento) {
     
@@ -19,22 +20,11 @@ export class EventoService {
   constructor(private http:HttpClient) { }
 
   
-  public getEventos() {
+  public getCursos() {
     
-    return this.http.post<IEvento[]>("http://localhost:8080/evento/listar", null);
+    return this.http.post<ICurso[]>("http://localhost:8080/curso/listar", null);
 
   }
 
-  getEvento(id : number) {
-    return this.http.post<IAgendamento[]>("http://localhost:8080/agendamento/listarEvento/", {
-      "id": id
-    });
-  }
-
-  public getNumeroInscritos(id : number, nome: string) {
-    return this.http.post<IAgendamento[]>("http://localhost:8080/atividade/inscricao/listarAtividade/", {
-      "id": id,
-      "nome": nome
-    });
-  }
+  
 }

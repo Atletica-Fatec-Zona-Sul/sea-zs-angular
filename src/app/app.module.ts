@@ -22,7 +22,7 @@ let routes = [
   { path: "consulta-atividade", component: ConsultaAtividadeComponent },
   { path : "usuario-inicio", component: UsuarioInicioComponent},
   { path : "", component: LoginComponent},
-  { path : "consulta-evento/:id/:nome", component: ConsultaEventoComponent},
+  { path : "consulta-evento/:id/:nome/:descricao", component: ConsultaEventoComponent},
   { path : "form-usuario", component: FormUsuarioComponent},
   { path : "minha-area", component: MinhaAreaComponent},
   { path : "form-usuario-log", component: FormUsuarioLogComponent},
